@@ -1,10 +1,9 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { createAsyncStoragePersister } from '@tanstack/query-async-storage-persister';
 import { QueryClient } from '@tanstack/react-query';
 import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client';
 import React from 'react';
 import { addProductApi } from '../Services/products/AddProductApi';
 import type { ProductI } from '../types/Products.dto';
+import { clientPersister } from './Storage';
 
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -21,9 +20,6 @@ queryClient.setMutationDefaults(['addProduct'], {
     },
 });
 
-const asyncStoragePersister = createAsyncStoragePersister({
-    storage: AsyncStorage,
-});
 interface PersistQueryProviderProps {
     children: React.ReactNode;
 }
@@ -33,7 +29,7 @@ export const PersistQueryProvider: React.FC<PersistQueryProviderProps> = ({
 }) => (
     <PersistQueryClientProvider
         client={queryClient}
-        persistOptions={{ persister: asyncStoragePersister }}
+        persistOptions={{ persister: clientPersister }}
         onSuccess={() => {
             queryClient.resumePausedMutations();
         }}

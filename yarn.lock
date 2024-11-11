@@ -2094,17 +2094,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-async-storage/async-storage@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@react-native-async-storage/async-storage@npm:2.0.0"
-  dependencies:
-    merge-options: ^3.0.4
-  peerDependencies:
-    react-native: ^0.0.0-0 || >=0.65 <1.0
-  checksum: 7007a411f13988594a3f9b5ebb29f1554ab65ff2bd90814fa8b125fa68b69c431bdfcd38769ae2dcb6505aec2bad9296f0a0fa1ac8f123007eda49c826f2d138
-  languageName: node
-  linkType: hard
-
 "@react-native-community/netinfo@npm:11.4.1":
   version: 11.4.1
   resolution: "@react-native-community/netinfo@npm:11.4.1"
@@ -2593,15 +2582,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/query-async-storage-persister@npm:^5.59.20":
-  version: 5.59.20
-  resolution: "@tanstack/query-async-storage-persister@npm:5.59.20"
-  dependencies:
-    "@tanstack/query-persist-client-core": 5.59.20
-  checksum: 743939f91ac5eb43a5881154e837be6f58d9f713e7e13925b9327bea4e6fb73cf167c214743173a98fcd9dcbb7861962fa5e0325e39b5c33803f7a81701e266b
-  languageName: node
-  linkType: hard
-
 "@tanstack/query-core@npm:5.59.20":
   version: 5.59.20
   resolution: "@tanstack/query-core@npm:5.59.20"
@@ -2615,6 +2595,16 @@ __metadata:
   dependencies:
     "@tanstack/query-core": 5.59.20
   checksum: f0b369283ecc45cbf94f621b6371098d48f9b435c753e509f450f3431615f1bab7cb93c1bc4281c5682d8d57db582235a918383fe2bc2dc490af009518fa8a10
+  languageName: node
+  linkType: hard
+
+"@tanstack/query-sync-storage-persister@npm:^5.59.20":
+  version: 5.59.20
+  resolution: "@tanstack/query-sync-storage-persister@npm:5.59.20"
+  dependencies:
+    "@tanstack/query-core": 5.59.20
+    "@tanstack/query-persist-client-core": 5.59.20
+  checksum: 1d8d2563a6e907b38271dcf07cad85699cbe4616b00e0ce6aa98a9bcec7199fdd0fc44d71c37ddeeee552cbc81b6610da7634a02932457c2ac35fabadce1cde9
   languageName: node
   linkType: hard
 
@@ -6853,13 +6843,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-plain-obj@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "is-plain-obj@npm:2.1.0"
-  checksum: cec9100678b0a9fe0248a81743041ed990c2d4c99f893d935545cfbc42876cbe86d207f3b895700c690ad2fa520e568c44afc1605044b535a7820c1d40e38daa
-  languageName: node
-  linkType: hard
-
 "is-plain-object@npm:^2.0.4":
   version: 2.0.4
   resolution: "is-plain-object@npm:2.0.4"
@@ -8212,15 +8195,6 @@ __metadata:
   version: 6.0.0
   resolution: "memoize-one@npm:6.0.0"
   checksum: f185ea69f7cceae5d1cb596266dcffccf545e8e7b4106ec6aa93b71ab9d16460dd118ac8b12982c55f6d6322fcc1485de139df07eacffaae94888b9b3ad7675f
-  languageName: node
-  linkType: hard
-
-"merge-options@npm:^3.0.4":
-  version: 3.0.4
-  resolution: "merge-options@npm:3.0.4"
-  dependencies:
-    is-plain-obj: ^2.1.0
-  checksum: d86ddb3dd6e85d558dbf25dc944f3527b6bacb944db3fdda6e84a3f59c4e4b85231095f58b835758b9a57708342dee0f8de0dffa352974a48221487fe9f4584f
   languageName: node
   linkType: hard
 
@@ -11215,14 +11189,13 @@ __metadata:
     "@babel/core": ^7.25.2
     "@expo/vector-icons": ^14.0.2
     "@faker-js/faker": ^9.2.0
-    "@react-native-async-storage/async-storage": ^2.0.0
     "@react-native-community/netinfo": 11.4.1
     "@react-navigation/bottom-tabs": ^7.0.1
     "@react-navigation/native": 7.0.0
     "@react-navigation/native-stack": ^7.0.0
     "@shopify/flash-list": ^1.7.2
     "@tanstack/eslint-plugin-query": ^5.60.1
-    "@tanstack/query-async-storage-persister": ^5.59.20
+    "@tanstack/query-sync-storage-persister": ^5.59.20
     "@tanstack/react-query": ^5.59.20
     "@tanstack/react-query-persist-client": ^5.59.20
     "@types/jest": ^29.5.12
